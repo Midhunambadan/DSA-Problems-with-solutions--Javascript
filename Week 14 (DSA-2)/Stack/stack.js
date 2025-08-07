@@ -37,6 +37,7 @@ class Stack {
     // Prints the elements in the stack
     printStack() {
         console.log(this.items.toString());
+        
     }
 }
 

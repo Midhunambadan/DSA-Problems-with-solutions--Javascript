@@ -13,9 +13,9 @@ class HashTable {
      }
  
      set(key, value) {
-         let index = this.hash(key);
- 
-         if (this.table[index]) {
+
+        let index = this.hash(key);
+        if (this.table[index]) {
              for (let i = 0; i < this.table[index].length; i++) {
                  if (this.table[index][i][0] === key) {
                      this.table[index][i][1] = value;
@@ -28,9 +28,9 @@ class HashTable {
              this.table[index].push([key, value]);
          }
  
-         this.size++;
+        this.size++;
      }
- 
+     
 
      get(key) {
          let index = this.hash(key);
@@ -80,7 +80,7 @@ class HashTable {
  ht.set('ab', 100);
  ht.set('ba', 101);
  ht.set('c', 103);
- ht.set('d', 104);
+ ht.set('d', 104);  
  ht.display()
  
 //  console.log(ht.remove('ab'))

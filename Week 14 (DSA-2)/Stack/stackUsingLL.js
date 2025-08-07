@@ -28,11 +28,11 @@ class Stack{
     pop(){
         if(!this.head){
             console.log('Empty stack')
-            return 
+            return null
         }else{
             this.head=this.head.next
             this.size--
-            return this.head.value
+            // return this.head.value
         }
     }
 
