@@ -128,7 +128,7 @@ console.log(graph.hasEdge('B','A'));
 // graph.display()
 
 
-// graph.bfs("B")
+graph.bfs("B")
 // console.log('-')
 // graph.dfs('B')
 
