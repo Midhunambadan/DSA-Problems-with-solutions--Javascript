@@ -14,10 +14,7 @@
 //palindrome
 
 //using tail also do these operations
-
 //Doubly linked list ask same as singly
-
-
 
 
 class Node{

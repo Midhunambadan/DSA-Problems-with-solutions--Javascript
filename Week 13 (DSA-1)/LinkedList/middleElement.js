@@ -29,11 +29,19 @@ class LinkedList {
         }
         let slow = this.head;
         let fast = this.head;
+        let prev=null
         while (fast && fast.next) {
-            fast = fast.next.next;
+            prev=slow
             slow = slow.next;
+            fast = fast.next.next;
+
         }
-        return slow.value;
+        if(fast===null){
+            return slow.value+prev.value
+        }else{
+            return slow.value;
+
+        }
     }
 
 
@@ -73,6 +81,8 @@ class LinkedList {
 
 let list = new LinkedList();
 
+list.prepend(60);
+list.prepend(50);
 list.prepend(40);
 list.prepend(30);
 list.prepend(20);
@@ -81,8 +91,10 @@ list.prepend(10);
 list.print();
 
 let res = list.middleElement();
+
 console.log(res);
 
-let midDel=list.deletemiddle()
+// let midDel=list.deletemiddle()
+
 // console.log(midDel)
-list.print()
+// list.print()
