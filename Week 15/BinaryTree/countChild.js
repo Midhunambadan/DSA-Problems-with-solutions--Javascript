@@ -5,7 +5,6 @@ class Node {
         this.right = null;
     }
 }
-
 function countLeafNodes(node) {
     // Base case: if the node is null, return 0
     if (node === null) {
