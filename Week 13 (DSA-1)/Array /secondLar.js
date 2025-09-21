@@ -1,18 +1,20 @@
-const arr=[70,50,-1000,1,2,3,4,5,6,7,8,9,0,-2,2,80,7]
+const arr = [-101, -20, -30,40];
 
-//find second largest and second smallest element 
-let lar=0
-let secLar=0
-function elements(arr){
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]>lar){
-            secLar=lar
-            lar=arr[i]
+let lar = -Infinity;
+let secLar = -Infinity;
+
+function elements(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > lar) {
+            secLar = lar;
+            lar = arr[i];
+        } else if (arr[i] > secLar && arr[i] !== lar) {
+            secLar = arr[i];
         }
     }
-    return lar,secLar
+    return secLar;
 }
 
-let res=elements(arr)
+let res = elements(arr);
 
-console.log(secLar)
+console.log(secLar);  // What will this print?
